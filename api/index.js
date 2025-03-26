@@ -14,7 +14,7 @@ export default async function handler(req, res) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'GeQR86F_Q4JZ7NIx5zzsBizDrE_UpSK9', // Put your key here, or better use Vercel env vars
+        'Authorization': 'GeQR86F_Q4JZ7Nlz5zzBizDrE_UpSK9',
         'Accept': 'application/json',
       },
       body: JSON.stringify({
