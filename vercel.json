@@ -2,6 +2,7 @@
   "buildCommand": "",
   "outputDirectory": "",
   "rewrites": [
-    { "source": "/api/join", "destination": "/api/join.js" }
+    { "source": "/api/join", "destination": "/api/join.js" },
+    { "source": "/api/leave", "destination": "/api/leave.js" }
   ]
 }
