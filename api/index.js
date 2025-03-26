@@ -1,11 +1,11 @@
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+import fetch from 'node-fetch';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { channel_id, user_id, role = '', team = 0 } = req.body;
+  const { channel_id, user_id, role, team } = req.body;
 
   if (!channel_id || !user_id) {
     return res.status(400).json({ error: 'Missing required fields' });
@@ -18,15 +18,15 @@ export default async function handler(req, res) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json',
         'Authorization': 'GeQR86F_Q4JZ7NIx5zzsBizDrE_UpSK9',
+        'Accept': 'application/json'
       },
       body: JSON.stringify({
-        channel_id: String(channel_id),
-        user_id: String(user_id),
+        channel_id,
+        user_id,
         role,
-        team,
-      }),
+        team
+      })
     });
 
     const data = await response.json();
