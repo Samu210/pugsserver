@@ -19,14 +19,14 @@ export default async function handler(req, res) {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'GeQR86F_Q4JZ7NIx5zzsBizDrE_UpSK9',
-        'Accept': 'application/json'
+        'Accept': 'application/json',
       },
       body: JSON.stringify({
         channel_id,
         user_id,
         role,
-        team
-      })
+        team,
+      }),
     });
 
     const data = await response.json();
