@@ -14,7 +14,7 @@ export default async function handler(req, res) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'GeQR86F_Q4JZ7Nlz5zzBizDrE_UpSK9',
+        'Authorization': 'Bearer GeQR86F_Q4JZ7Nlz5zzBizDrE_UpSK9',
         'Accept': 'application/json',
       },
       body: JSON.stringify({
